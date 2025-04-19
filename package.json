@@ -1,0 +1,12 @@
+{
+  "name": "istudy-react-monorepo",
+  "version": "1.0.0",
+  "description": "React技术栈研究学习",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -r run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
