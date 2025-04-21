@@ -5,11 +5,15 @@ import "@assets/styles/iconfont.scss";
 import "@assets/styles/common.scss";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
+import { Provider } from "react-redux";
+import store from "./store";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Suspense>
-      <RouterProvider router={router}></RouterProvider>
+      <Provider store={store}>
+        <RouterProvider router={router}></RouterProvider>
+      </Provider>
     </Suspense>
   </StrictMode>
 );

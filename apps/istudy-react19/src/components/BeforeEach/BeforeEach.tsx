@@ -14,10 +14,10 @@ export default function BeforeEach(props: BeforeEachProps) {
   const matchs = matchRoutes(routes, location);
 
   if (Array.isArray(matchs)) {
-    const meta = matchs[matchs.length - 1].route.meta;
-    if (meta?.auth) {
-      return <Navigate to={"/login"}></Navigate>;
-    }
+    // const meta = matchs[matchs.length - 1].route.meta;
+    // if (meta?.auth) {
+    //   return <Navigate to={"/login"}></Navigate>;
+    // }
   }
 
   return <>{props.children}</>;

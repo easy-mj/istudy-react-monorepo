@@ -6,8 +6,8 @@ const service = axios.create({
 
 service.interceptors.request.use(
   (config) => {
-    const token = "";
-    if (token) config.headers.Authorization = `Bearer ${token}`;
+    // const token = "";
+    // if (token) config.headers.Authorization = `Bearer ${token}`;
     return config;
   },
   (error) => {
@@ -18,7 +18,6 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response: AxiosResponse): AxiosResponse => {
     if (response.status === 200) return response;
-
     throw new Error(response.status.toString());
   },
   (error) => {
