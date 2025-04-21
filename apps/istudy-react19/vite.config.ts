@@ -11,6 +11,14 @@ export default defineConfig({
     },
   },
   server: {
+    host: "0.0.0.0",
     port: 9001,
+    open: false,
+    proxy: {
+      "/api": {
+        target: "http://localhost:9000/",
+        changeOrigin: true, // 允许跨域
+      },
+    },
   },
 });

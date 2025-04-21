@@ -40,7 +40,7 @@ function http<T = any>({
       window.location.reload();
     }
 
-    return Promise.reject(res.data);
+    return Promise.resolve(res.data);
   };
 
   const failHandler = (error: Response<Error>) => {
