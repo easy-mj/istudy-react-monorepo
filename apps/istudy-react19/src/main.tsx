@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "@assets/styles/reset.scss";
 import "@assets/styles/iconfont.scss";
@@ -8,6 +8,8 @@ import router from "./router";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <Suspense>
+      <RouterProvider router={router}></RouterProvider>
+    </Suspense>
   </StrictMode>
 );
